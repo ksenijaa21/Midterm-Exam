@@ -17,9 +17,20 @@
 # Write your function here
 
 
+def convert_2_upper(recenica):
 
-def main():
-    # Test your function here
-    pass
+    nova_recenica = ""
 
-main()
+    for character in recenica:
+        broj_slova = ord(character)
+
+        if broj_slova > 96 and broj_slova < 123:
+            broj_velikog_slova = broj_slova -32
+            character = chr(broj_velikog_slova)
+
+        nova_recenica += character
+
+    return nova_recenica
+
+recenica = input("Unesi: ")
+novarecenica = print(convert_2_upper(recenica))

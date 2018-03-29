@@ -22,9 +22,22 @@
 # Write your function here
 
 
+def get_profit(list_of_bitcoin):
 
-def main():
-    # Test your function here
-    pass
+    list_of_bitcoin = [11564, 81734.3, 4985, 283654]
+    most_expensive = list_of_bitcoin[0]
+    least_expensive = list_of_bitcoin[0]
 
-main()
+    for i in range(len(list_of_bitcoin) - 1):
+
+        if most_expensive < list_of_bitcoin[i + 1]:
+            most_expensive = list_of_bitcoin[i + 1]
+
+    print(most_expensive)
+    for i in range(len(list_of_bitcoin) - 1):
+
+        if least_expensive > list_of_bitcoin[i + 1]:
+            least_expensive = list_of_bitcoin[i + 1]
+    print(least_expensive)
+
+    return most_expensive - least_expensive

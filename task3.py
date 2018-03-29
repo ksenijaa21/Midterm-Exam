@@ -17,3 +17,46 @@
 """
 
 # Write your code here
+
+def is_nonnegative(broj):
+
+    if broj >= 0:
+        return True
+    else:
+        return False
+
+
+list_length = int(input("Koliko brojeva treba da ima lista? "))
+
+lista_brojeva = []
+
+for i in range(list_length):
+    novi_broj = int(input("Unesite broj #" + str(i+1) + ": "))
+    lista_brojeva.append(novi_broj)
+
+total_nonnegative = total_negative = 0
+
+for broj in lista_brojeva:
+
+    if is_nonnegative(broj):
+        total_nonnegative += 1
+    else:
+        total_negative += 1
+
+
+print("Lista brojeva: ", str(lista_brojeva))
+print("Broj nenegativnih: ", total_nonnegative)
+print("Broj negativnih: ", total_negative)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,10 +18,23 @@
 
 # Write your function here
 
+#Area of Circle
+# A = Pi * (r**2)
+
+Pi = 3.14
+
+def area_of_circle(r):
+
+    if (not isinstance(r, int)) and (not isinstance(r, float)):
+        return -1
+    if r > 0:
+
+        return Pi*(r**2)
 
 
 def main():
-    # Test your function here
-    pass
+
+    povrsina = area_of_circle(2)
+    print(povrsina)
 
 main()

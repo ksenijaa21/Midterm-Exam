@@ -13,3 +13,27 @@
 """
 
 # Write your code here
+
+def proizvod_cifara(broj):
+
+
+    if not isinstance(broj, int):
+        return -1
+
+    proizvod = 1
+
+    while broj > 0:
+        cifra = broj % 10
+        broj = broj // 10
+        proizvod = proizvod * cifra
+
+    return proizvod
+
+
+def main():
+
+    int_broj = 523
+    proizvod = proizvod_cifara(int_broj)
+    print("Proizvod cifara je: ", proizvod)
+
+main()
